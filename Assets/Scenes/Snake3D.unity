@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 181384077}
   - component: {fileID: 181384076}
   - component: {fileID: 181384075}
-  - component: {fileID: 181384078}
   m_Layer: 0
   m_Name: 3rdPersonCamera
   m_TagString: MainCamera
@@ -207,19 +206,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &181384078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 181384074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0aa87fcee50e54d4ab8ad7b73d93b88d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snake: {fileID: 0}
 --- !u!1 &278166951
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aa87fcee50e54d4ab8ad7b73d93b88d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snake: {fileID: 0}
+  snake: {fileID: 1087013638}
 --- !u!1 &291014109
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,10 +486,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 6078930755811605055, guid: 95993cd9d7e6aff4f8dba50f43359c9e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6913247440338266355, guid: 95993cd9d7e6aff4f8dba50f43359c9e, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -680,30 +662,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2694378533230214542, guid: 8b2db0ef6da0cbf40adb3b7db99f7895, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2694378533230214542, guid: 8b2db0ef6da0cbf40adb3b7db99f7895, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2694378533230214542, guid: 8b2db0ef6da0cbf40adb3b7db99f7895, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2694378533514601900, guid: 8b2db0ef6da0cbf40adb3b7db99f7895, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2694378533514601900, guid: 8b2db0ef6da0cbf40adb3b7db99f7895, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2694378533514601900, guid: 8b2db0ef6da0cbf40adb3b7db99f7895, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.15
-      objectReference: {fileID: 0}
     - target: {fileID: 2694378534234656711, guid: 8b2db0ef6da0cbf40adb3b7db99f7895, type: 3}
       propertyPath: m_Name
       value: Snake
@@ -722,7 +680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2694378534234656712, guid: 8b2db0ef6da0cbf40adb3b7db99f7895, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.75
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2694378534234656712, guid: 8b2db0ef6da0cbf40adb3b7db99f7895, type: 3}
       propertyPath: m_LocalRotation.w
@@ -754,6 +712,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b2db0ef6da0cbf40adb3b7db99f7895, type: 3}
+--- !u!1 &1087013638 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2694378534234656711, guid: 8b2db0ef6da0cbf40adb3b7db99f7895, type: 3}
+  m_PrefabInstance: {fileID: 1087013637}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1435313531
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,6 +840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1521853612}
   - component: {fileID: 1521853611}
+  - component: {fileID: 1521853610}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -884,6 +848,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1521853610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521853609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aae14d16235b0e4eb7eb4877ded5373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1521853611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1056,10 +1032,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall
       objectReference: {fileID: 0}
-    - target: {fileID: 6078930755811605055, guid: 95993cd9d7e6aff4f8dba50f43359c9e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6913247440338266355, guid: 95993cd9d7e6aff4f8dba50f43359c9e, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1104,9 +1076,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8140533241681161990, guid: 95993cd9d7e6aff4f8dba50f43359c9e, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f86c5ad550c41a64fbb1975707446f65, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95993cd9d7e6aff4f8dba50f43359c9e, type: 3}
