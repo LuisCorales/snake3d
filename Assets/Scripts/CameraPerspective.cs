@@ -7,8 +7,13 @@ public class CameraPerspective : MonoBehaviour
     public GameObject firstPerson;//Cameras
     public GameObject thirdPerson;
 
-    //On start-up, always third person
     private void Start()
+    {
+        Initialize();
+    }
+
+    //On start-up, always third person
+    public void Initialize()
     {
         firstPerson.SetActive(false);
         thirdPerson.SetActive(true);
