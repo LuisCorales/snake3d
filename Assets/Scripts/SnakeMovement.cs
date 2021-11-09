@@ -15,7 +15,7 @@ public class SnakeMovement : MonoBehaviour
 
     void Awake()
     {
-
+        currentDirection = "up";
     }
 
     // Update is called once per frame
