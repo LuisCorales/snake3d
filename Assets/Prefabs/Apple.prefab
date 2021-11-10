@@ -12,14 +12,14 @@ GameObject:
   - component: {fileID: 7445731526937175040}
   - component: {fileID: 4661359849472561354}
   - component: {fileID: 6876543544456033443}
-  - component: {fileID: 9214063124678331623}
+  - component: {fileID: 759776395446972150}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5835353170490649509
 Transform:
   m_ObjectHideFlags: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6606928426949095711}
   m_LocalRotation: {x: -0.42377797, y: 0.33817038, z: 0.18458882, w: 0.8197439}
   m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 52.2131, y: 81.1082, z: 84.99837}
+  m_LocalScale: {x: 26.10655, y: 40.5541, z: 42.499184}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -96,16 +96,17 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.018
   m_Center: {x: 0.00025223472, y: 0.0090539185, z: 0.006984702}
---- !u!135 &9214063124678331623
-SphereCollider:
+--- !u!114 &759776395446972150
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6606928426949095711}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.018
-  m_Center: {x: 0.00025223472, y: 0.0090539185, z: 0.006984702}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 119ad7419427c094a805d1bcc228311c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 50
+  oppositeDirection: 0
