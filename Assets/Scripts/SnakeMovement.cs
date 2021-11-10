@@ -8,14 +8,15 @@ public class SnakeMovement : MonoBehaviour
 
     [SerializeField] float speed = 3f;
 
-    string currentDirection = "";
-    string oldDirection = "";
+    string currentDirection;
+    string oldDirection;
 
     Transform headPosition;
 
     void Start()
     {
-        // currentDirection = "up";
+        currentDirection = "";
+        oldDirection = currentDirection;
     }
 
     // Update is called once per frame
@@ -26,10 +27,9 @@ public class SnakeMovement : MonoBehaviour
 
     void HandleInput()
     {
-        oldDirection = currentDirection;
-
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
+            oldDirection = currentDirection;
             currentDirection = "up";
         }
 
