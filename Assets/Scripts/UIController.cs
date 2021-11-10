@@ -3,19 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject cameras;
+    [SerializeField] GameObject cameras;
+    [SerializeField] TextMeshProUGUI buttonText;
+    [SerializeField] GameObject menu;
 
-    [SerializeField]
-    private TextMeshProUGUI buttonText;
-
-    // Update is called once per frame
-    void Update()
+    void Start() 
     {
-        
+        ToggleMenu(false);
     }
 
     public void ChangeCamera()//Change camera perspective
@@ -36,4 +34,18 @@ public class UIController : MonoBehaviour
         }
     }
 
+    public void ToggleMenu(bool turnOn)
+    {
+        menu.SetActive(turnOn);
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

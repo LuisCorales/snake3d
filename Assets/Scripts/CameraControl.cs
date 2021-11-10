@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour
 {
-    public GameObject snake;//Reference to the starting snake bit
-    private Vector3 offset;//Distance the camera should move to keep up with the snek
+    [SerializeField] GameObject snake;//Reference to the starting snake bit
+    public Vector3 offset;//Distance the camera should move to keep up with the snek
 
     // Start is called before the first frame update
     void Start()

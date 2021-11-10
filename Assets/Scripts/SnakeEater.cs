@@ -4,31 +4,38 @@ using UnityEngine;
 
 public class SnakeEater : MonoBehaviour
 {
-    private bool dead = false;
-    private int eatenFruits = 0;
-    
+    private bool dead;
+    private int eatenFruits;
+    [SerializeField]
+    private GameObject jointsParent;
+    [SerializeField]
+    private GameObject jointPrefab;
+    private List<GameObject> snakeParts = new List<GameObject>();//List to store all the snake's joints and the head
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        dead = false;
+        eatenFruits = 0;
+        this.snakeParts.Add(this.gameObject);//Add the head to the parts list
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnCollisionEnter(Collision collision)//Grow when colliding with a fruit, lose game if it with a
-    {
-        if (collision.gameObject.CompareTag("Fruit"))
-        {
-            this.eatenFruits++;
-        }
+    private void OnCollisionEnter(Collision collision)//Lose game if colliding with wall or self
+    {      
 
         if(collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("SnakeJoint"))
         {
-            this.dead = true;
+            this.dead = true;           
+        }
+    }
+
+    private void OnTriggerEnter(Collider trigger)//Grow when colliding with a fruit
+{
+        if (trigger.gameObject.CompareTag("Fruit"))
+        {
+            this.eatenFruits++;
+            Destroy(trigger.gameObject);//Destroy the eaten fruit
+            GrowJoint();//Grow a new joint
         }
     }
 
@@ -40,5 +47,13 @@ public class SnakeEater : MonoBehaviour
     public bool IsDead()
     {
         return this.dead;
+    }
+
+    private void GrowJoint()//Make a new joint behind the last existing joint
+    {
+        GameObject joint = Instantiate(jointPrefab, jointsParent.transform);//Add a new joint to the snake's body
+        GameObject lastPart = this.snakeParts[this.snakeParts.Count - 1];
+        joint.transform.position = lastPart.transform.position - lastPart.transform.forward;//Put the new joint after the last part of the snake
+        this.snakeParts.Add(joint);//Add the joint to the parts list
     }
 }
