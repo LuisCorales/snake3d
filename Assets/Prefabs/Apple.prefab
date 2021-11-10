@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5835353170490649509}
   - component: {fileID: 7445731526937175040}
   - component: {fileID: 4661359849472561354}
+  - component: {fileID: 6876543544456033443}
+  - component: {fileID: 9214063124678331623}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Fruit
@@ -81,3 +83,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &6876543544456033443
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6606928426949095711}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.018
+  m_Center: {x: 0.00025223472, y: 0.0090539185, z: 0.006984702}
+--- !u!135 &9214063124678331623
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6606928426949095711}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.018
+  m_Center: {x: 0.00025223472, y: 0.0090539185, z: 0.006984702}

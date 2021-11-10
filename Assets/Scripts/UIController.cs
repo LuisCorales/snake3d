@@ -12,6 +12,9 @@ public class UIController : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI buttonText;
 
+    private bool restartClicked = false;
+    private bool exitClicked = false;
+
     // Update is called once per frame
     void Update()
     {
@@ -34,6 +37,26 @@ public class UIController : MonoBehaviour
         {
             buttonText.SetText("First Person");
         }
+    }
+
+    public void RestartClick()
+    {
+        this.restartClicked = true;
+    }
+
+    public void ExitClick()
+    {
+        this.exitClicked = true;
+    }
+
+    public bool GetRestartClicked()
+    {
+        return this.restartClicked;
+    }
+
+    public bool GetExitClicked()
+    {
+        return this.exitClicked;
     }
 
 }

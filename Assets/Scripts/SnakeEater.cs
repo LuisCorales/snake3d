@@ -29,6 +29,7 @@ public class SnakeEater : MonoBehaviour
         if(collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("SnakeJoint"))
         {
             this.dead = true;
+            Debug.Log(dead);
         }
     }
 
