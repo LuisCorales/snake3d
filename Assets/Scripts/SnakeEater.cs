@@ -4,19 +4,14 @@ using UnityEngine;
 
 public class SnakeEater : MonoBehaviour
 {
-    private bool dead = false;
-    private int eatenFruits = 0;
+    private bool dead;
+    private int eatenFruits;
     
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        dead = false;
+        eatenFruits = 0;
     }
 
     private void OnCollisionEnter(Collision other) //Grow when colliding with a fruit, lose game if it with a

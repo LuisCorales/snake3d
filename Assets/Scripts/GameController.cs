@@ -7,60 +7,37 @@ using TMPro;
 
 public class GameController : MonoBehaviour
 {
-    private bool gameOver = false;
-    [SerializeField]
-    private GameObject snake;
-    [SerializeField]
-    private TextMeshProUGUI points;
-    [SerializeField]
-    private GameObject overMessage;
-    [SerializeField]
-    private GameObject restartButton;
-    [SerializeField]
-    private GameObject exitButton;
-    [SerializeField]
-    private GameObject UI;
+    private bool gameOver;
+    [SerializeField] GameObject snake;
+    [SerializeField] TextMeshProUGUI points;
+    [SerializeField] GameObject UI;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameOver = false;
+        Time.timeScale = 1;//Unpause game
     }
 
     // Update is called once per frame
     void Update()
     {
-        this.UpdateScore();
-        this.UpdateGameOver();
+        HandleScore();
+        HandleGameOver();
     }
 
-    private void UpdateScore()
+    private void HandleScore()
     {
         points.text = "Points: " + snake.GetComponent<SnakeEater>().GetEatenFruits();
     }
 
-    private void UpdateGameOver()
+    private void HandleGameOver()
     {
-        this.gameOver = snake.GetComponent<SnakeEater>().IsDead();
+        gameOver = snake.GetComponent<SnakeEater>().IsDead();
         if (gameOver)//End the game
         {
             Time.timeScale = 0;//Pause game
-            overMessage.SetActive(true);//Enable game over message and options
-            restartButton.SetActive(true);
-            exitButton.SetActive(true);
-            this.RestartOrExit();//Check what to do next, restar or exit game
+            UI.GetComponent<UIController>().ToggleMenu(true); //Show menu to quit or restart game
         }
     }
-
-    private void RestartOrExit()
-    {
-        if (UI.GetComponent<UIController>().GetRestartClicked())//Reload scene if restart is clicked
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().ToString());
-        }else if (UI.GetComponent<UIController>().GetExitClicked())
-        {
-            Application.Quit();
-        }
-    }
-
 }
