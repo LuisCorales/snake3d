@@ -14,7 +14,6 @@ public class UIController : MonoBehaviour
     void Start() 
     {
         ToggleMenu(false);
-        Debug.Log("aaa");
     }
 
     public void ChangeCamera()//Change camera perspective
