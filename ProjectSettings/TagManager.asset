@@ -5,9 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
+<<<<<<< HEAD
   - Fruit
   - SnakeHead
   - SnakeJoint
+=======
+>>>>>>> main
   layers:
   - Default
   - TransparentFX

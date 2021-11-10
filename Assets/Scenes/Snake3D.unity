@@ -436,6 +436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aa87fcee50e54d4ab8ad7b73d93b88d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   snake: {fileID: 544893617}
 --- !u!1 &278666823
 GameObject:
@@ -571,6 +572,9 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278666823}
   m_CullTransparentMesh: 1
+=======
+  snake: {fileID: 1087013638}
+>>>>>>> main
 --- !u!1 &291014109
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,6 +684,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (2)
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 6078930755811605055, guid: 95993cd9d7e6aff4f8dba50f43359c9e, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -688,6 +693,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
+=======
+>>>>>>> main
     - target: {fileID: 6913247440338266355, guid: 95993cd9d7e6aff4f8dba50f43359c9e, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -928,6 +935,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 2694378532793670012, guid: 8b2db0ef6da0cbf40adb3b7db99f7895, type: 3}
       propertyPath: m_TagString
       value: SnakeJoint
@@ -960,6 +968,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: SnakeHead
       objectReference: {fileID: 0}
+=======
+>>>>>>> main
     - target: {fileID: 2694378534234656711, guid: 8b2db0ef6da0cbf40adb3b7db99f7895, type: 3}
       propertyPath: m_Name
       value: Snake
@@ -978,7 +988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2694378534234656712, guid: 8b2db0ef6da0cbf40adb3b7db99f7895, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.75
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2694378534234656712, guid: 8b2db0ef6da0cbf40adb3b7db99f7895, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1010,6 +1020,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b2db0ef6da0cbf40adb3b7db99f7895, type: 3}
+--- !u!1 &1087013638 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2694378534234656711, guid: 8b2db0ef6da0cbf40adb3b7db99f7895, type: 3}
+  m_PrefabInstance: {fileID: 1087013637}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1435313531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1135,6 +1150,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1521853612}
+<<<<<<< HEAD
+=======
+  - component: {fileID: 1521853611}
+>>>>>>> main
   - component: {fileID: 1521853610}
   m_Layer: 0
   m_Name: GameController
@@ -1144,6 +1163,21 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!114 &1521853610
+<<<<<<< HEAD
+=======
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521853609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aae14d16235b0e4eb7eb4877ded5373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1521853611
+>>>>>>> main
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1450,6 +1484,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 6078930755811605055, guid: 95993cd9d7e6aff4f8dba50f43359c9e, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1458,6 +1493,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
+=======
+>>>>>>> main
     - target: {fileID: 6913247440338266355, guid: 95993cd9d7e6aff4f8dba50f43359c9e, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1502,9 +1539,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8140533241681161990, guid: 95993cd9d7e6aff4f8dba50f43359c9e, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f86c5ad550c41a64fbb1975707446f65, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95993cd9d7e6aff4f8dba50f43359c9e, type: 3}
