@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SnakeEater : MonoBehaviour
 {
-    public bool dead = false;
+    private bool dead = false;
     private int eatenFruits = 0;
     
     // Start is called before the first frame update
