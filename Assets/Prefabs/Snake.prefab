@@ -237,6 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jointPrefab: {fileID: 43004981533684951, guid: af8d8a7638a35b94ea97ce56be12c351, type: 3}
+  popSound: {fileID: 0}
 --- !u!1 &2694378533514601899
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,6 +479,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b655eed94a70904c8e663ecc619ff0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  head: {fileID: 0}
+  head: {fileID: 2694378533998700090}
   body: {fileID: 2694378532793670012}
-  speed: 3
+  speed: 5
