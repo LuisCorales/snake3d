@@ -1,11 +1,11 @@
 # snake3d-unity
 
 Programacion V
+- [Luis Corales](https://github.com/LuisCorales)
+- [Diego Hiriart](https://github.com/Diego-Hiriart)
+- [Daniela Estupiñan](https://github.com/Daniela-Estupinan)
+- [Martin Galvez](https://github.com/MGA1398)
 
-- Luis Corales
-- Diego Hiriart
-- Daniela Estupiñan
-- Martin Galvez
 
 # Instrucciones
 Usa las flechas del teclado para moverte en el terreno y recolecta todas las frutas que puedas!
