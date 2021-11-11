@@ -1,0 +1,6 @@
+Brick texture: https://www.maxpixel.net/Texture-Masonry-Red-Bricks-Stone-Wall-Brick-4033188
+Apple model: "Apple" (https://skfb.ly/6WO6M) by namdinh is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+Menu background: https://www.artstation.com/artwork/xzg9EX
+Github logo: https://www.flaticon.es/icono-gratis/logotipo-de-github_25231
+Skybox: https://assetstore.unity.com/packages/2d/textures-materials/sky/allsky-free-10-sky-skybox-set-146014
+Background music: https://www.beatstars.com/beat/serenity-2890880

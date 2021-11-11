@@ -13,7 +13,7 @@ public class SnakeEater : MonoBehaviour
     void Start()
     {
         dead = false;
-        eatenFruits = 0;       
+        eatenFruits = 0;
     }
 
     private void OnCollisionEnter(Collision collision)//Lose game if colliding with wall or self

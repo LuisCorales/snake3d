@@ -9,4 +9,14 @@ public class StartMenu : MonoBehaviour
         Debug.Log("START GAME");
         SceneManager.LoadScene(1); // Load the game scene
     }
+
+    public void OpenRepository()
+    {
+        Application.OpenURL("https://github.com/LuisCorales/snake3d-unity");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

@@ -13,7 +13,7 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject UI;
     [SerializeField] GameObject fruitPrefab;
     [SerializeField] GameObject fruitSpawner;
-    [SerializeField] float mapLength = 29;
+
     [SerializeField] float mapWidth = 29;
     [SerializeField] float spawnLimit = 1f;//How far from the map end is a valid area for a pickup
     private int oldFruitCount = 0;

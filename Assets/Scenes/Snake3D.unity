@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 117b5bcf3bf5de841a43b8539db5758d, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.372461, g: 0.6095708, b: 0.8613117, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -484,11 +484,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278666823}
   m_CullTransparentMesh: 1
---- !u!1 &290955506 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2694378532793670012, guid: 8b2db0ef6da0cbf40adb3b7db99f7895, type: 3}
-  m_PrefabInstance: {fileID: 1087013637}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &291014109
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,11 +684,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &676302600 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2694378533998700090, guid: 8b2db0ef6da0cbf40adb3b7db99f7895, type: 3}
-  m_PrefabInstance: {fileID: 1087013637}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &847655452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -863,18 +853,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 676302601, guid: 8b2db0ef6da0cbf40adb3b7db99f7895, type: 3}
-      propertyPath: jointPrefab
-      value: 
-      objectReference: {fileID: 43004981533684951, guid: af8d8a7638a35b94ea97ce56be12c351, type: 3}
-    - target: {fileID: 676302601, guid: 8b2db0ef6da0cbf40adb3b7db99f7895, type: 3}
-      propertyPath: jointsParent
-      value: 
-      objectReference: {fileID: 290955506}
-    - target: {fileID: 1087013640, guid: 8b2db0ef6da0cbf40adb3b7db99f7895, type: 3}
-      propertyPath: head
-      value: 
-      objectReference: {fileID: 676302600}
     - target: {fileID: 2694378534234656711, guid: 8b2db0ef6da0cbf40adb3b7db99f7895, type: 3}
       propertyPath: m_Name
       value: Snake
@@ -1304,7 +1282,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exit
+  m_text: Main menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1415,7 +1393,6 @@ MonoBehaviour:
   UI: {fileID: 1435313531}
   fruitPrefab: {fileID: 6606928426949095711, guid: 46db00a28dc315045979fb27b9bdf771, type: 3}
   fruitSpawner: {fileID: 1287991531}
-  mapLength: 29
   mapWidth: 29
   spawnLimit: 1
 --- !u!4 &1521853612
@@ -1793,7 +1770,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1435313532}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_MethodName: ReturnToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
