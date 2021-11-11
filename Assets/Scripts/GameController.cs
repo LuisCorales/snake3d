@@ -60,7 +60,7 @@ public class GameController : MonoBehaviour
             float randX = Random.Range(0 + spawnLimit, mapWidth - spawnLimit);
             float randZ = Random.Range(0 + spawnLimit, mapWidth - spawnLimit);
             GameObject fruit = Instantiate(fruitPrefab, new Vector3(randX, 0.5f, randZ), 
-                new Quaternion(-0.423777968f, 0.338170379f, 0.18458882f, 0.819743872f), fruitSpawner.transform);//Create a new fruit with default prefab rotation
+                fruitPrefab.transform.rotation, fruitSpawner.transform);//Create a new fruit with default prefab rotation
             fruit.SetActive(true);//Activate the fruit (prefab isnt active)
             this.oldFruitCount = currentFruitCount;//Update old count
         }       
