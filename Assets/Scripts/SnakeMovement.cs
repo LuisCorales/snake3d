@@ -9,7 +9,7 @@ public class SnakeMovement : MonoBehaviour
     [SerializeField] float speed = 3f;
 
     string currentInput;
-    string oldInput;
+    string currentDir;
     
     Transform headPosition;
 
@@ -19,8 +19,7 @@ public class SnakeMovement : MonoBehaviour
     Vector3 upDir;
     Vector3 downDir;
 
-    Vector3 oldDir;
-    Vector3 currentDir;
+    Vector3 newDir;
 
     Vector3 newRotation;
 
@@ -29,11 +28,10 @@ public class SnakeMovement : MonoBehaviour
     void Start()
     {
         //Reset all variables when starting
-        currentInput = "";
-        oldInput = "";
-        currentDir = transform.position;
-        oldDir = currentDir;
-        hasToRotate = true;
+        currentInput = "up";
+        currentDir = "up";
+        newDir = transform.position;     
+        hasToRotate = false;
     }
 
     // Update is called once per frame
@@ -50,6 +48,137 @@ public class SnakeMovement : MonoBehaviour
         downDir = new Vector3(transform.position.x , transform.position.y, transform.position.z - 1);
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            currentInput = "up";
+        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            currentInput = "down";
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            currentInput = "left";
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            currentInput = "right";
+        }
+
+        switch (currentInput.ToLower())
+        {
+            case "up"://Move to this direction only if the current one isnt the opposite
+                if (!currentDir.Equals("down"))
+                {
+                    newDir = upDir;                 
+                    switch (currentDir.ToLower())
+                    {
+                        case "left":
+                            newRotation = new Vector3(0, 90, 0); //Rotate 90 to north
+                            hasToRotate = true;
+                            break;
+
+                        case "right":
+                            newRotation = new Vector3(0, -90, 0); //Rotate -90 to north
+                            hasToRotate = true;
+                            break;
+                    }
+                    //currentDir = currentInput;
+                }
+                else
+                {
+                    newDir = downDir;
+                }
+            break;
+
+            case "down":
+                if (!currentDir.Equals("up"))
+                {
+                    newDir = downDir;
+                    switch (currentDir.ToLower())
+                    {
+                        case "left":
+                            newRotation = new Vector3(0, -90, 0); //Rotate 90 to south
+                            hasToRotate = true;
+                            break;
+
+                        case "right":
+                            newRotation = new Vector3(0, 90, 0); //Rotate -90 to south
+                            hasToRotate = true;
+                            break;
+                    }
+                    //currentDir = currentInput;
+                }
+                else
+                {
+                    newDir = upDir;
+                }
+                break;
+
+            case "left":
+                if (!currentDir.Equals("right"))
+                {
+                    newDir = leftDir;
+                    switch (currentDir.ToLower())
+                    {
+                        case "up":
+                            newRotation = new Vector3(0, -90, 0); //Rotate 90 to west
+                            hasToRotate = true;
+                            break;
+
+                        case "down":
+                            newRotation = new Vector3(0, 90, 0); //Rotate -90 to west
+                            hasToRotate = true;
+                            break;
+                    }
+                    //currentDir = currentInput;
+                }
+                else
+                {
+                    newDir = rightDir;
+                }
+                break;
+
+            case "right":
+                if (!currentDir.Equals("left"))
+                {
+                    newDir = rightDir;                   
+                    switch (currentDir.ToLower())
+                    {
+                        case "up":
+                            newRotation = new Vector3(0, 90, 0); //Rotate 90 to east
+                            hasToRotate = true;
+                            break;
+
+                        case "down":
+                            newRotation = new Vector3(0, -90, 0); //Rotate -90 to east
+                            hasToRotate = true;
+                            break;
+                    }
+                    //currentDir = currentInput;
+                }
+                else
+                {
+                    newDir = leftDir;
+                }
+                break;
+
+            default:
+            break;
+        }
+
+        if (hasToRotate && !currentDir.Equals(currentInput))
+        {
+            hasToRotate = false;
+            transform.Rotate(newRotation, Space.World);
+            currentDir = currentInput;
+        }
+
+        transform.position = Vector3.MoveTowards(transform.position, newDir, Time.deltaTime * speed);
+
+        /*if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             //If the new direction is the same as the one
             //detected by the arrow keys, then don't change the old one
@@ -185,7 +314,7 @@ public class SnakeMovement : MonoBehaviour
             break;
         }
 
-        if(hasToRotate)
+        if (hasToRotate)
         {
             hasToRotate = false;
             transform.Rotate(newRotation, Space.World);
@@ -193,7 +322,7 @@ public class SnakeMovement : MonoBehaviour
 
         transform.position = Vector3.MoveTowards(transform.position, currentDir, Time.deltaTime * speed);
 
-        
+        */
     }
 
 }
