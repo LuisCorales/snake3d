@@ -25,8 +25,8 @@ public class UIController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void QuitGame()
+    public void ReturnToMenu()
     {
-        Application.Quit();
+        SceneManager.LoadScene(0);
     }
 }

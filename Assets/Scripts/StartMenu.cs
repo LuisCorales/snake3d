@@ -14,4 +14,9 @@ public class StartMenu : MonoBehaviour
     {
         Application.OpenURL("https://github.com/LuisCorales/snake3d-unity");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
