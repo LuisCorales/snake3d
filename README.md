@@ -8,5 +8,5 @@ Programacion V
 
 
 # Instrucciones
-Usa las flechas del teclado para moverte en el terreno y recolecta todas las frutas que puedas!
-Cuidado con las paredes o con tu propia cola.
+- Usa las flechas del teclado para moverte en el terreno y recolecta todas las frutas que puedas!
+- Cuidado con las paredes o con tu propia cola.
