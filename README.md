@@ -2,10 +2,10 @@
 
 Programacion V
 
-Luis Corales
-Diego Hiriart
-Daniela Estupiñan
-Martin Galvez
+- Luis Corales
+- Diego Hiriart
+- Daniela Estupiñan
+- Martin Galvez
 
 # Instrucciones
 Usa las flechas del teclado para moverte en el terreno y recolecta todas las frutas que puedas!
